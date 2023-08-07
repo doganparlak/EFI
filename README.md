@@ -26,7 +26,7 @@ The performance and visualization layer is facilitated by the Visualizer class, 
 ![Performance and Visualization Layer](documentation/library_design/ConceptLayer.png)
 
 ## Author
-The author of the project is ![Dogan Parlak](https://doganparlak.github.io).
+The author of the project is [Dogan Parlak](https://doganparlak.github.io).
 
 ## Acknowledgements
 I would like to express my deepest gratitude to my co-supervisor, [Prof. Dr. Ulrik Brandes](https://gess.ethz.ch/en/the-department/people/person-detail.html?persid=239462), for his invaluable guidance, unwavering support, and profound expertise throughout the development of this implementation.
