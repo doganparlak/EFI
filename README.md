@@ -7,6 +7,10 @@ This library serves as an open-source implementation of the metrics outlined in 
 ## Contents
 The repository is organized into documentation, source code, optimization, and results sections. The documentation includes the thesis, EFI document, and related images used to illustrate the library. The source code contains files with classes that form the implementation. Optimization involves parameter optimization processes for specific concepts, showcasing their search space and plotted choices. The results section presents the output of each concept for each match, visually representing the outcomes.
 
+## Installation
+To download the open-source implementation of the EFI, copy paste the following command to your command line.
+
+`git clone https://github.com/doganparlak/EFI.git`
 
 ## Library Design
 The library is structured with three main layers: data layer, concept layer, and performance/visualization layer.
@@ -34,3 +38,4 @@ I would like to express my deepest gratitude to my co-supervisor, [Prof. Dr. Ulr
 I am also grateful to my supervisor, [Prof. Dr. Claudio J. Tessone](http://www.ifi.uzh.ch/en/bdlt/Team/Tessone.html), for his continuous support and valuable input.
 
 I extend my sincere appreciation to [Hadi Sotudeh](https://sn.ethz.ch/profile.html?persid=299928), for his encouragement, enlightening discussions, and feedback during the course of this research.
+
