@@ -1,36 +1,10 @@
-from scipy.spatial import Delaunay, ConvexHull
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import matplotlib.patches as patches
 import numpy as np
-import pandas as pd
-import math
-import json
-from datetime import datetime
-import copy
 from matplotlib.axes import Axes
 from matplotlib.transforms import Affine2D
 from matplotlib.patches import Arc
-from sys import intern
-import pickle
-import networkx as nx
-from itertools import groupby
-import operator
-from sympy import Point, Line, pi
-import floodlight.io.tracab as tr
-from IPython.display import display
-from pathlib import Path
-from tqdm import tqdm
-from sklearn.cluster import KMeans
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.svm import SVC
-from sklearn.model_selection import GridSearchCV, train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.compose import ColumnTransformer
 import warnings
-import optuna
 
 class Visualizer():
 
@@ -213,7 +187,8 @@ class Visualizer():
         poss_label.set_weight("bold")
         
         ax.legend(bbox_to_anchor=(0, 1), loc='lower left', ncol=len(category_names), fontsize= legend_size)
-        
+        plt.show()
+
     def ball_recovery_plotter(self, match, home_recovery_time, away_recovery_time):
         """Visualize the ball recovery time results on a pie chart.
         Parameters
@@ -255,7 +230,7 @@ class Visualizer():
             label.set_color(label_color)  # Set the color for labels
             label.set_fontsize(label_size)
         ax.set_aspect('equal')  # Ensure pie is drawn as a circle
-    
+        plt.show()
     def pressure_on_ball_plotter(self, match, tracking, pressure_home_coords, pressure_away_coords):
         """Visualize the pressure on the ball results on football pitch.
         Parameters
@@ -326,7 +301,7 @@ class Visualizer():
         
         # Add the direction text to the ax2
         ax2.text(text_x, text_y, text, rotation=90, va='center', ha='center', color = "gray", fontsize = direction_size, weight = "bold")
-
+        plt.show()
     def forced_turnover_plotter(self, match, tracking, forced_turnover_home, forced_turnover_away):
         """Visualize the forced turnover results on football pitch.
         Parameters
@@ -396,7 +371,7 @@ class Visualizer():
         
         # Add the direction text to the ax2
         ax2.text(text_x, text_y, text, rotation=90, va='center', ha='center', color = "gray", fontsize = direction_size, weight = "bold")
-
+        plt.show()
     def team_shape_plotter(self, match, tracking, home_shape, away_shape, home_in_pos_shape, away_in_pos_shape, home_out_pos_shape, away_out_pos_shape):
         """Visualize the team shape results on football pitch.
         Parameters
@@ -671,7 +646,7 @@ class Visualizer():
         
         # Add the direction text to the ax6
         ax6.text(text_x, text_y, text, rotation=90, va='center', ha='center', color = "gray", fontsize = 10, weight = "bold")
-
+        plt.show()
     def xG_plotter(self, match, shots_df, probs, home_xG_tot, away_xG_tot, home_score, away_score):
         """Visualize the xG results on football pitch.
         Parameters
@@ -828,7 +803,7 @@ class Visualizer():
                           plt.Line2D([], [], marker='s', color= head_away, linestyle='None')]
         custom_labels = ['No Goal', 'Goal', 'Right_Foot', 'Left Foot', 'Head']
         ax2.legend(custom_handles, custom_labels, loc='lower left', fontsize = legend_fontsize)
-
+        plt.show()
     def phases_of_play_plotter(self, match, home_in_phases, home_out_phases, away_in_phases, away_out_phases):
         """Visualize the phases of play results on horizontal bar chart.
         Parameters
@@ -927,7 +902,7 @@ class Visualizer():
 
         # Increase font size of values on y-axis
         ax2.tick_params(axis='y', labelsize=coord_size)
-
+        plt.show()
     def normalize_values(self, values, min_val, max_val, desired_range=(0.3, 1.5)):
         """Helper function to normalize the given set of values.
         Parameters
@@ -949,7 +924,7 @@ class Visualizer():
         normalized_values = (values - min_val) / (max_val - min_val)
         scaled_values = (desired_range[1] - desired_range[0]) * normalized_values + desired_range[0]
         return scaled_values
-
+        plt.show()
     def final_third_entries_plotter(self, match, home_fte, away_fte):
         """Visualize final third entries results on a football pitch.
         Parameters
@@ -1166,7 +1141,7 @@ class Visualizer():
         custom_labels = [home_team_name, away_team_name]
         legend_size = 16
         ax.legend(custom_handles, custom_labels, loc='lower right', fontsize = legend_size)
-
+        plt.show()
     def line_breaks_plotter(self, match, lb_pass_events, lb_prog_events):
         """ Visualize line breaks results on football pitch.
         Parameters
@@ -1517,7 +1492,7 @@ class Visualizer():
             
         ax2_1.text(-30, 54 , s = match.meta.away_team_name.values[0] + " Line Breaks - Direction Type", color = "black", fontsize = title_fontsize)
         ax2_1.legend(custom_handles_dir_away, custom_labels_dir, loc='lower right', fontsize = title_fontsize)
-
+        plt.show()
     def reception_plotter(self, match, recep_events):
         """ Visualize reception behind midfield and defensive line results on football pitch.
         Parameters
@@ -1613,7 +1588,7 @@ class Visualizer():
 
         ax2.text(-30, 54 , s = match.meta.away_team_name.values[0] + " Receptions - (" + str(len(away_between_mid_def_recep_events_x)) + ", " + str(len(away_behind_def_recep_events_x)) + ")", color = "black", fontsize = title_fontsize)
         ax2.legend(custom_handles_away, custom_labels, loc='lower right', fontsize = legend_fontsize)
-
+        plt.show()
     def line_height_team_length_plotter(self,match, avg_home_defensive_line_heights, avg_home_offensive_line_heights, avg_away_defensive_line_heights, avg_away_offensive_line_heights, \
                                                     avg_home_defensive_team_lengths, avg_home_offensive_team_lengths, avg_away_defensive_team_lengths, avg_away_offensive_team_lengths, \
                                                     avg_home_defensive_team_widths, avg_home_offensive_team_widths, avg_away_defensive_team_widths, avg_away_offensive_team_widths ):
@@ -1865,3 +1840,5 @@ class Visualizer():
                 
                 # Add the direction text to the ax1
                 ax.text(text_x, text_y, text, rotation=90, va='center', ha='center', color = arrow_color, fontsize = fontsize, weight = weight)
+
+        plt.show()

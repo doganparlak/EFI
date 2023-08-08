@@ -4,8 +4,11 @@ An Open-Source Implementation of FIFA's Enhanced Football Intelligence
 ## Overview
 This library serves as an open-source implementation of the metrics outlined in FIFA's Enhanced Football Intelligence document. Its purpose is to validate these concepts using data from FIFA World Cup 2022. The goal is to make these concepts accessible to researchers, analysts, and enthusiasts, enabling them to reproduce [FIFA's match reports](https://www.fifatrainingcentre.com/en/fwc2022/post-match-summaries/post-match-summary-reports.php) and gain valuable insights into football performance analysis. The library assesses the concepts presented in the EFI document to determine if they provide sufficient information for generating FIFA's match reports. It also includes potential improvements to address any ambiguities.
 
-## Contents
-The repository is organized into documentation, source code, optimization, and results sections. The documentation includes the thesis, EFI document, and related images used to illustrate the library. The source code contains files with classes that form the implementation. Optimization involves parameter optimization processes for specific concepts, showcasing their search space and plotted choices. The results section presents the output of each concept for each match, visually representing the outcomes.
+## Content
+The repository is organized into documentation, source code, optimization, and results sections. The documentation includes the thesis, EFI document, and related images used to illustrate the library. The source code contains files with classes that form the implementation and a file demonstrating the use of the classes. Optimization involves parameter optimization processes for specific concepts, showcasing their search space and plotted choices. The results section presents the output of each concept for each match, visually representing the outcomes.
+
+## Data
+The data used for the analysis is not available due to confidentiality reasons.
 
 ## Installation
 To download the open-source implementation of the EFI, copy paste the following command to your command line.

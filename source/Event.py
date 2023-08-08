@@ -1,37 +1,6 @@
-from scipy.spatial import Delaunay, ConvexHull
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import matplotlib.patches as patches
-import numpy as np
 import pandas as pd
-import math
 import json
-from datetime import datetime
-import copy
-from matplotlib.axes import Axes
-from matplotlib.transforms import Affine2D
-from matplotlib.patches import Arc
-from sys import intern
-import pickle
-import networkx as nx
-from itertools import groupby
-import operator
-from sympy import Point, Line, pi
-import floodlight.io.tracab as tr
-from IPython.display import display
-from pathlib import Path
 from tqdm import tqdm
-from sklearn.cluster import KMeans
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.svm import SVC
-from sklearn.model_selection import GridSearchCV, train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.compose import ColumnTransformer
-import warnings
-import optuna
-
 class Event:
     def __init__(self, path):
         """ Initialize the event class parameters.
