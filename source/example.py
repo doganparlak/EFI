@@ -6,15 +6,15 @@ from source.Visualizer import Visualizer
 
 #-------- Object initializations --------
 #Match object
-match = Match(path= "match_data.json") # the path is given as an example and does not include the data
+match = Match(path= "match_data.json") # the path is given as an example and does not direct to the actual data
 print("Match object is created")
 
 #Event object
-event = Event(path= "event_data.json") # the path is given as an example and does not include the data
+event = Event(path= "event_data.json") # the path is given as an example and does not direct to the actual data
 print("Event object is created")
 
 #Tracking object
-tracking = Tracking(path= "tracking_data.dat", match= match) # the path is given as an example and does not include the data
+tracking = Tracking(path= "tracking_data.dat", match= match) # the path is given as an example and does not direct to the actual data
 print("Tracking object is created")
 
 #EFI object
@@ -71,15 +71,15 @@ print("Receptions analysis is completed")
 
 #Expected goal (xG)
 #Games encompassing the training data for building the xG model
-match_1 = Match(path= "match_data1.json") 
-event_1 = Event(path= "event_data1.json") 
-tracking_1 = Tracking(path= "tracking_data1.dat", match= match_1) 
-match_2 = Match(path= "match_data2.json") 
-event_2 = Event(path= "event_data2.json") 
-tracking_2 = Tracking(path= "tracking_data2.dat", match= match_2) 
-match_3 = Match(path= "match_data3.json") 
-event_3 = Event(path= "event_data3.json") 
-tracking_3 = Tracking(path= "tracking_data3.dat", match= match_3) 
+match_1 = Match(path= "match_data1.json") # the path is given as an example and does not direct to the actual data
+event_1 = Event(path= "event_data1.json") # the path is given as an example and does not direct to the actual data
+tracking_1 = Tracking(path= "tracking_data1.dat", match= match_1) # the path is given as an example and does not direct to the actual data
+match_2 = Match(path= "match_data2.json") # the path is given as an example and does not direct to the actual data
+event_2 = Event(path= "event_data2.json") # the path is given as an example and does not direct to the actual data
+tracking_2 = Tracking(path= "tracking_data2.dat", match= match_2) # the path is given as an example and does not direct to the actual data
+match_3 = Match(path= "match_data3.json") # the path is given as an example and does not direct to the actual data
+event_3 = Event(path= "event_data3.json") # the path is given as an example and does not direct to the actual data
+tracking_3 = Tracking(path= "tracking_data3.dat", match= match_3) # the path is given as an example and does not direct to the actual data
 
 efi1 = EFI(match= match_1, events= event_1, tracking= tracking_1)
 efi2 = EFI(match= match_2, events= event_2, tracking= tracking_2)
