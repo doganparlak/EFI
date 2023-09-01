@@ -38,7 +38,7 @@ pressure_home_cnt, pressure_away_cnt, pressure_home, pressure_away, pressure_ind
 print("Pressure on the ball analysis is completed")
 
 #Forced turnovers
-home_forced_turnover_cnt, away_forced_turonver_cnt, home_forced_turnovers, away_forced_turnovers = efi.forced_turnover(possession_threshold = 97)
+home_forced_turnover_cnt, away_forced_turonver_cnt, home_forced_turnovers, away_forced_turnovers = efi.forced_turnover()
 print("Forced turnover analysis is completed")
 
 #Defensive line height and team length 
