@@ -130,3 +130,7 @@ print("Line breaks plot is generated")
 #Receptions behind midfield and defensive lines
 vis.reception_plotter(match, recep_events)
 print("Receptions behind midfield and defensive lines plot is generated")
+
+#Expected goal (xG)
+vis.xG_plotter(match, shots_df, probs, home_xG, away_xG, home_score, away_score)
+print("Expected goal plot is generated")
