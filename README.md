@@ -30,7 +30,7 @@ The concept layer is primarily represented by the EFI class, implementing the me
 
 The performance and visualization layer is facilitated by the Visualizer class, which presents the results from the concept layer in an organized and visually enhanced format for interpretation.
 
-![Performance and Visualization Layer](documentation/library_design/ConceptLayer.png)
+![Performance and Visualization Layer](documentation/library_design/PerformanceVisualizerLayer.png)
 
 ## Author
 The author of the project is [Dogan Parlak](https://doganparlak.github.io).
